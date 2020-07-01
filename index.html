@@ -27,14 +27,15 @@
               Wymiana waluty &#128184
             </legend>
             <p class=" form__paragraph">Pole oznaczone * musi zostać wypełnione</p>
-            <p><label><span class="form__labelText">wymiana z:<span class="form__span">(wybierz walutę)</span></span><select class="form__select js-exchangeOn" name="currencyHave">
-              <option value="PLN">PLN</option>
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
-              <option value="GBP">GBP</option>
-              <option value="CHF">CHF</option>
-            </select>
-          </label></p>
+            <p><label><span class="form__labelText">wymiana z: <span class="form__span">(wybierz
+                    walutę)</span></span><select class="form__select js-exchangeOn" name="currencyHave">
+                  <option value="PLN">PLN</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="CHF">CHF</option>
+                </select>
+              </label></p>
             <p><label><span class="form__labelText">wymiana na: <span class="form__span">(wybierz
                     walutę)</span></span><select class="form__select js-exchangeFor" name="currencyWant">
                   <option value="EUR">EUR</option>
@@ -44,7 +45,8 @@
                   <option value="CHF">CHF</option>
                 </select>
               </label></p>
-
+            <p><label><span class="form__labelText">Podaj kwotę*: </span><input class="form__field js-amount"
+                  name="value" type="number" required step="0.01"></label></p>
             <button class="form__button js-calculateButton">przelicz</button>
             <p class="form__result js-result"></p>
           </fieldset>
