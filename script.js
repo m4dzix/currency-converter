@@ -1,3 +1,11 @@
+{
+  const hallo = () => {
+    console.log("Hallo!")
+  };
+  hallo()
+
+}
+
 let formElement = document.querySelector(".js-form");
 let amount = document.querySelector(".js-amount");
 let currencyHave = document.querySelector(".js-exchangeOn")
