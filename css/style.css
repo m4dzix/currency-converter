@@ -9,10 +9,12 @@ html {
 }
 
 body {
-  max-width: 1000px;
-  margin: 0 auto;
+
   background-color: rgba(240, 230, 140, 0.253);
   font-family: "Roboto", sans-serif;
 }
-
+.wrapper{
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
