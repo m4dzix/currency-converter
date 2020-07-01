@@ -1,0 +1,20 @@
+.section__paragraph{
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  background-color: peachpuff;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.section__link{
+  text-decoration: none;
+  color:black
+}
+.section__link:hover{
+cursor: pointer;
+color: #555;
+}
+.section__link:active{
+color: #777;
+}
