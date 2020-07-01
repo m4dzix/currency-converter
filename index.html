@@ -15,34 +15,36 @@
 </head>
 
 <body>
-<div class="wrapper">
-  <header class="header">
-    <h1 class="header__title">kalkulator walutowy</h1>
-  </header>
-  <main class="main">
-    <form class="form js-form">
-      <fieldset class="form__fieldset">
-        <legend class="form__legend">
-          Wymiana waluty &#128184
-        </legend>
-        <p class=" form__paragraph">Pole oznaczone * musi zostać wypełnione</p>
-        <p><label><span class="form__labelText">podaj kwotę w złotówkach*:</span><input class="form__field js-amount"
-              name="value" type="number" required step="0.01"></label></p>
-        <p><label><span class="form__labelText">wymiana na: <span class="form__span">(wybierz
-                walutę)</span></span><select class="form__select js-exchangeFor" name="currencyWant">
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
-              <option value="GBP">GBP</option>
-              <option value="CHF">CHF</option>
-            </select>
-          </label></p>
+  <div class="div--darkenOverlay">
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__title">kalkulator walutowy</h1>
+      </header>
+      <main class="main">
+        <form class="form js-form">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Wymiana waluty &#128184
+            </legend>
+            <p class=" form__paragraph">Pole oznaczone * musi zostać wypełnione</p>
+            <p><label><span class="form__labelText">podaj kwotę w złotówkach*:</span><input
+                  class="form__field js-amount" name="value" type="number" required step="0.01"></label></p>
+            <p><label><span class="form__labelText">wymiana na: <span class="form__span">(wybierz
+                    walutę)</span></span><select class="form__select js-exchangeFor" name="currencyWant">
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="CHF">CHF</option>
+                </select>
+              </label></p>
 
-        <button class="form__button js-calculateButton">przelicz</button>
-        <p class="form__result js-result"></p>
-      </fieldset>
-    </form>
-  </main>
-</div>
+            <button class="form__button js-calculateButton">przelicz</button>
+            <p class="form__result js-result"></p>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+  </div>
 </body>
 
 </html>
