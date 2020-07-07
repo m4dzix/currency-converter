@@ -14,10 +14,10 @@
   const finalCalculate = (amountValue, changeCurrencyFrom, changeCurrencyOn) => {
 
     const zloty = 1;
-    const euro = 4.4395;
-    const usDollar = 3.9526;
-    const britishPound = 4.9062;
-    const swissFranc = 4.1738
+    const euro = 4.4722;
+    const usDollar = 3.9604;
+    const britishPound = 4.9773;
+    const swissFranc = 4.2049
 
     let finalResult;
 
