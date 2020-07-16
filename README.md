@@ -1,5 +1,9 @@
 # Currency Converter
 
+## Live link
+
+[https://m4dzix.github.io/currency-converter/](https://m4dzix.github.io/currency-converter/)
+
 Simple currency converter. Allows to check currencies value like PLN, €, £, $ and CHF.
 Second project made during frontend developer cours on [“youcode.pl”](https://youcode.pl).
 
