@@ -1,23 +1,20 @@
 {
   const hallo = () => {
-    console.log("Hallo!")
+    console.log("Hallo!");
   };
-  hallo()
-
-} {
-  const formElement = document.querySelector(".js-form");
-  const amount = document.querySelector(".js-amount");
-  const currencyHave = document.querySelector(".js-exchangeOn")
-  const currencyWant = document.querySelector(".js-exchangeFor");
-  const resultValue = document.querySelector(".js-result");
-
-  const finalCalculate = (amountValue, changeCurrencyFrom, changeCurrencyOn) => {
-
+  hallo();
+}
+{
+  const finalCalculate = (
+    amountValue,
+    changeCurrencyFrom,
+    changeCurrencyOn
+  ) => {
     const zloty = 1;
-    const euro = 4.4722;
-    const usDollar = 3.9604;
-    const britishPound = 4.9773;
-    const swissFranc = 4.2049
+    const euro = 4.1904;
+    const usDollar = 3.8453;
+    const britishPound = 4.3719;
+    const swissFranc = 4.3706;
 
     let finalResult;
 
@@ -37,42 +34,67 @@
       case "CHF":
         finalResult = +amountValue * swissFranc;
         break;
-    };
+    }
     switch (changeCurrencyOn) {
       case "PLN":
-        return finalResult /= zloty;
+        return (finalResult /= zloty);
 
       case "EUR":
-        return finalResult /= euro;
+        return (finalResult /= euro);
 
       case "USD":
-        return finalResult /= usDollar;
+        return (finalResult /= usDollar);
 
       case "GBP":
-        return finalResult /= britishPound;
+        return (finalResult /= britishPound);
 
       case "CHF":
-        return finalResult /= swissFranc;
-
-    };
-
+        return (finalResult /= swissFranc);
+    }
   };
-  const init = () => {
-    const changeCurrencyFrom = currencyHave.value;
-    const changeCurrencyOn = currencyWant.value;
-    const amountValue = amount.value;
 
-    const finalResult = finalCalculate(amountValue, changeCurrencyFrom, changeCurrencyOn);
-
+  const updateTextResult = (
+    amountValue,
+    changeCurrencyFrom,
+    finalResult,
+    changeCurrencyOn
+  ) => {
+    const resultValue = document.querySelector(".js-result");
 
     resultValue.innerText = `${amountValue} ${changeCurrencyFrom} TO ${finalResult.toFixed(
-    2
-  )} ${changeCurrencyOn}`;
-  }
+      2
+    )} ${changeCurrencyOn}`;
+  };
 
-  formElement.addEventListener("submit", (event) => {
+  const onFormSubmit = (event) => {
     event.preventDefault();
 
-    init()
-  });
+    const amount = document.querySelector(".js-amount");
+    const currencyHave = document.querySelector(".js-exchangeFrom");
+    const currencyWant = document.querySelector(".js-exchangeFor");
+
+    const amountValue = +amount.value;
+    const changeCurrencyFrom = currencyHave.value;
+    const changeCurrencyOn = currencyWant.value;
+
+    const finalResult = finalCalculate(
+      amountValue,
+      changeCurrencyFrom,
+      changeCurrencyOn
+    );
+    updateTextResult(
+      amountValue,
+      changeCurrencyFrom,
+      finalResult,
+      changeCurrencyOn
+    );
+  };
+
+  const init = () => {
+    const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("submit", onFormSubmit);
+  };
+
+  init();
 }
